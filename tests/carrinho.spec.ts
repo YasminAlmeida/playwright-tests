@@ -93,7 +93,7 @@ test.describe('Teste do Reset do Estado Inicial do Carrinho a partir da Home', (
 
     test('Resetar carrinho a partir da Home', async ({ page }) => {
         await homePage.addToCart('Sauce Labs Backpack');
-        await expect(page.locator('[data-test="shopping-cart-badge"]')).toHaveText('1'); // Corrigindo o seletor
+        await expect(page.locator('[data-test="shopping-cart-badge"]')).toHaveText('1');
         await homePage.resetAppState();
         await expect(page.locator('[data-test="shopping-cart-badge"]')).not.toBeVisible();
     });
